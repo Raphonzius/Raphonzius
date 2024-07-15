@@ -19,7 +19,7 @@ I'm a passionate technology enthusiast, always eager to learn and collaborate. M
 ## 📫 Let's Connect 
 - Reach out to me on LinkedIn
 - Pronouns: He/Him
-- Fun Fact: 🔧 Currently obsessed with Flipper Zero for hacking adventures and SELinux for diving deep into security lockdowns! 🛡️💻
+- Fun Fact: 🔧 Currently obsessed with Flipper Zero for hacking adventures and SELinux for diving deep into security lockdowns! 🛡️
 
 **********
 
