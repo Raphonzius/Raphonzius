@@ -27,9 +27,8 @@ I'm a passionate technology enthusiast, always eager to learn and collaborate. M
 
 [<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>](mailto:rafael.informa@gmail.com) [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/rafaelrodriguespereira/)
 
-Thank you for checking it out! 😉
-
 **********
+Thank you for checking it out! 😉
 
 <!---
 Raphonzius/Raphonzius is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
