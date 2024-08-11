@@ -7,7 +7,7 @@
 
 <div align="left">
   <h3 align="left">&nbsp;&ensp;🛠️ Programming</h3>
-  <img width="96" />
+  <img width="24" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="30" alt="java logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" height="30" alt="spring logo"  />
