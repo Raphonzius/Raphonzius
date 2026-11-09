@@ -1,7 +1,7 @@
 <h1 align="left">Hello there! 👋 I'm Rafael</h1>
 
 <p align="center">
-  <img src="assets/oldschool/hero.svg" width="100%" alt="Pix receipt for Rafael Pereira, Software Engineer at Getnet. Event-Driven Architecture enthusiast, gRPC user, Java enthusiast, Rust for high performance, focused on AI token minimizing with deterministic solutions." />
+  <img src="assets/oldschool/hero.svg" width="100%" alt="Pix receipt for Rafael Pereira, Software Engineer at Getnet: Event-Driven Architecture enthusiast, gRPC user, Java enthusiast, Rust for high performance, AI tokens minimized with deterministic solutions." />
 </p>
 
 <h2 align="left">🖥️ Daily Tools</h2>
@@ -48,38 +48,22 @@
 
 <h2 align="left">👾 More About Me</h2>
 
-I'm a technology enthusiast, always eager to learn and collaborate. My academic journey has been enriched by practical experiences within and beyond college walls. Here's a glimpse into my tech journey:
+Backend Java engineer on regulated Open Finance APIs at Getnet, and AI Champion for 9 squads. Before that, about three years at Samsung SDS on logistics systems across Latin America.
 
 ### 🚀 Current Focus
 
-- Event-Driven Architecture
-    - I build regulated Open Finance APIs in Java and Spring Boot at Getnet, with strict P95/P99 latency and TPS targets.
-    - Transactional outbox, idempotent consumers, DLQ with retry and pub/sub on RabbitMQ, Azure Service Bus and Event Hubs.
-    - gRPC with a Protobuf library that keeps every team and stack on one canonical contract.
-    - Java enthusiast, and Rust for the parts that need high performance.
-
 <p align="center">
-  <img src="assets/oldschool/focus.svg" width="100%" alt="Event flow on paper tape: API, outbox, broker, two idempotent consumers, and a DLQ that retries back to the broker." />
-</p>
-
-- AI token minimizing with deterministic solutions
-    - AI Champion for 3 tribes and 9 squads: I maintain their AI agent harness and run workshops every two weeks.
-    - If it can be deterministic, it should not be inference: Qdrant / vector DB, scripts, caches (CAG) and Jev / Laya for LLM task routing.
-
-<p align="center">
-  <img src="assets/oldschool/tokens.svg" width="100%" alt="Index card: CAG cache, scripts, Qdrant and Jev / Laya routing come before the model, which only gets what is left." />
+  <img src="assets/oldschool/record.svg" width="100%" alt="Four tickets: 2 days for a Java 21 and Spring Boot 4.1 migration other squads did in 2 sprints, USD 37k a year saved on AWS, 670k+ messages a month, 45% of subtasks sent to the cheapest mode." />
 </p>
 
 <p align="center">
-  <img src="assets/oldschool/record.svg" width="100%" alt="Four tickets: 2 days for a migration other squads did in 2 sprints, USD 37k a year saved on AWS, 670k+ messages a month, 45% of subtasks sent to the cheapest mode." />
+  <img src="assets/oldschool/focus.svg" width="100%" alt="How I build: outbox, broker, idempotent consumers and a DLQ with retry. Before the model: CAG cache, scripts, Qdrant and Jev / Laya routing." />
 </p>
 
 ### 🧩 Featured Projects
 
 <p align="center">
-  <a href="https://github.com/Raphonzius?tab=repositories">
-    <img src="assets/oldschool/projects.svg" width="100%" alt="Library catalog cards: poc-grpc, grpc-common, grpc-server, Demo-SpringSecurity6-JWT, spring-and-vue, Capstone-Project." />
-  </a>
+  <img src="assets/oldschool/projects.svg" width="100%" alt="Catalog cards: poc-grpc, grpc-common, grpc-server, Demo-SpringSecurity6-JWT, spring-and-vue, Capstone-Project." />
 </p>
 
 <p align="center">
@@ -91,19 +75,14 @@ I'm a technology enthusiast, always eager to learn and collaborate. My academic 
   <a href="https://github.com/Raphonzius/Capstone-Project">Capstone-Project</a>
 </p>
 
-### 📄 Research
-
-- First author of a full paper on Event Sourcing, CQRS and gRPC for digital twins (*Open Source LVC Simulation Architecture*), presented at Latinoware 2026.
-
-### 📊 Profile Signal
+📄 First author of *Open Source LVC Simulation Architecture* (Event Sourcing, CQRS and gRPC for digital twins), Latinoware 2026.
 
 <p align="center">
-  <img src="assets/oldschool/stats.svg" width="100%" alt="Totals: contributions, commits, active days, public repos and followers, with the language mix." />
+  <img src="assets/oldschool/punch.svg" width="100%" alt="Punched card of the last 12 months: contributions, commits, active days and language mix." />
 </p>
 
-<p align="center">
-  <img src="assets/oldschool/punch.svg" width="100%" alt="Punched card of the last 53 weeks: one hole for each day with contributions." />
-</p>
+<details>
+<summary><b>🌐 Beyond Tech · 🌱 Community Involvement</b></summary>
 
 ### 🌐 Beyond Tech
 
@@ -114,6 +93,8 @@ I'm a technology enthusiast, always eager to learn and collaborate. My academic 
 
 - Outside of work and studies, I channel my energy into community service as a volunteer in the Scout movement ⚜️
 - From park revitalization to blood donations, I believe in the power of collective action to create positive change
+
+</details>
 
 <h2 align="left">🌐 Find Me</h2>
 

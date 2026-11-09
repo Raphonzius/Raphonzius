@@ -73,8 +73,9 @@ def write(out: Path, name: str, s: str) -> None:
 
 # ------------------------------------------------------------------ hero
 def hero() -> str:
-    d, s = lib.data(), None
-    rx, rw, top, bot = 40, 500, 36, 556
+    d = lib.data()
+    H = 508
+    rx, rw, top, bot = 40, 500, 30, 470
     teeth = [f"{rx},{bot}"]
     x, up = rx, False
     while x < rx + rw:
@@ -83,67 +84,62 @@ def hero() -> str:
         up = not up
     path = f"M{rx},{top} H{rx+rw} V{bot} " + " ".join(f"L{p}" for p in reversed(teeth[1:])) + f" L{rx},{bot} Z"
     xl, xr = 68, 512
-    b = [f'<rect width="{W}" height="600" rx="6" fill="{DESK}"/>',
+    b = [f'<rect width="{W}" height="{H}" rx="6" fill="{DESK}"/>',
          f'<path d="{path}" fill="#000" opacity=".35" transform="translate(5 5)"/>',
          f'<path d="{path}" fill="{PAPER}"/>']
-    t = 280
-    st = 120
+    t, st = 200, 95
     # header
-    b.append(f'<g class="w" {D(t)}>' + txt(xl, 104, "RAFAEL PEREIRA", "sf", 54) + "</g>")
-    b.append(f'<g class="w" {D(t+st)}>' + txt(xl, 134, "SOFTWARE ENGINEER · GETNET · SÃO PAULO", "mu b", 13) + "</g>")
-    b.append(f'<g class="w" {D(t+2*st)}>' + txt(xl, 156, "OPEN FINANCE APIS · PIX · CONTA DIGITAL", "mu", 13) + "</g>")
-    b.append(f'<line class="w" {D(t+3*st)} x1="{xl}" y1="180" x2="{xr}" y2="180" stroke="{INK}" stroke-width="1.4" stroke-dasharray="7 5"/>')
+    b.append(f'<g class="w" {D(t)}>' + txt(xl, 90, "RAFAEL PEREIRA", "sf", 50) + "</g>")
+    b.append(f'<g class="w" {D(t+st)}>' + txt(xl, 118, "SOFTWARE ENGINEER · GETNET · SÃO PAULO", "mu b", 13) + "</g>")
+    b.append(f'<g class="w" {D(t+2*st)}>' + txt(xl, 138, "OPEN FINANCE APIS · PIX · AI CHAMPION, 9 SQUADS", "mu", 13) + "</g>")
+    b.append(f'<line class="w" {D(t+3*st)} x1="{xl}" y1="158" x2="{xr}" y2="158" stroke="{INK}" stroke-width="1.4" stroke-dasharray="7 5"/>')
     items = [("01  Event-Driven Architecture", "enthusiast"), ("02  gRPC", "user"),
-             ("03  Java", "enthusiast"), ("04  Rust", "high performance")]
-    y = 218
+             ("03  Java", "enthusiast"), ("04  Rust", "high performance"),
+             ("05  AI tokens", "minimized")]
+    y = 192
     for i, (l, r) in enumerate(items):
-        b.append(row(xl, xr, y, l, r, 17, t + (4 + i) * st))
-        y += 38
-    b.append(f'<line class="w" {D(t+8*st)} x1="{xl}" y1="{y-14}" x2="{xr}" y2="{y-14}" stroke="{INK}" stroke-width="1.4" stroke-dasharray="7 5"/>')
-    y += 16
-    b.append(row(xl, xr, y, "FOCUS", "AI token minimizing", 17, t + 9 * st))
-    y += 38
-    b.append(row(xl, xr, y, "METHOD", "deterministic solutions", 17, t + 10 * st))
-    y += 30
-    b.append(f'<line class="w" {D(t+11*st)} x1="{xl}" y1="{y}" x2="{xr}" y2="{y}" stroke="{INK}" stroke-width="3" />')
-    b.append(f'<line class="w" {D(t+11*st)} x1="{xl}" y1="{y+5}" x2="{xr}" y2="{y+5}" stroke="{INK}" stroke-width="1" />')
-    y += 36
-    b.append(f'<g class="w" {D(t+12*st)}>' + txt(xl, y, "@Raphonzius", "b", 14) + "</g>")
-    b.append(f'<g class="w" {D(t+13*st)}>' + txt(xl, y + 22, "SINCE JAN 2026 AT GETNET", "mu", 12.5) + "</g>")
+        b.append(row(xl, xr, y, l, r, 16.5, t + (4 + i) * st))
+        y += 34
+    b.append(f'<line class="w" {D(t+9*st)} x1="{xl}" y1="{y-12}" x2="{xr}" y2="{y-12}" stroke="{INK}" stroke-width="3" />')
+    b.append(f'<line class="w" {D(t+9*st)} x1="{xl}" y1="{y-7}" x2="{xr}" y2="{y-7}" stroke="{INK}" stroke-width="1" />')
+    y += 22
+    b.append(row(xl, xr, y, "METHOD", "deterministic first", 16.5, t + 10 * st, rcls="b"))
+    y += 40
+    b.append(f'<g class="w" {D(t+11*st)}>' + txt(xl, y, "@Raphonzius", "b", 14) + "</g>")
     # perforation above the torn edge
     b.append(f'<line x1="{rx}" y1="{bot-14}" x2="{rx+rw}" y2="{bot-14}" stroke="{MUT}" stroke-width="1.4" stroke-dasharray="1 5" stroke-linecap="round" opacity=".7"/>')
     # stamp: outer g rotates (static), inner g animates
-    b.append(f'<g transform="translate(398 {y+8}) rotate(-8)"><g class="f" {D(t+13.5*st+300)}>'
+    b.append(f'<g transform="translate(430 {y+6}) rotate(-6)"><g class="f" {D(t+12*st+250)}>'
              f'<rect x="-84" y="-24" width="168" height="48" rx="4" fill="none" stroke="{RED}" stroke-width="3.5"/>'
              f'<rect x="-78" y="-18" width="156" height="36" rx="2" fill="none" stroke="{RED}" stroke-width="1.2"/>'
              f'<text x="0" y="8" text-anchor="middle" font-size="22" class="b rd" style="letter-spacing:.08em">EFETIVADO</text></g></g>')
     # right column: print + quote
-    b.append(f'<g class="f" {D(500)}><g transform="rotate(2 700 170)">'
-             f'<rect x="590" y="40" width="224" height="268" fill="{PAPER}"/>'
-             f'<image href="{d["avatar"]}" x="602" y="52" width="200" height="200" preserveAspectRatio="xMidYMid slice"/>'
-             f'<text x="702" y="286" text-anchor="middle" font-size="22" class="sf it">São Paulo, Brazil</text>'
+    b.append(f'<g class="f" {D(400)}><g transform="rotate(2 690 150)">'
+             f'<rect x="596" y="36" width="196" height="226" fill="{PAPER}"/>'
+             f'<image href="{d["avatar"]}" x="606" y="46" width="176" height="176" preserveAspectRatio="xMidYMid slice"/>'
+             f'<text x="694" y="248" text-anchor="middle" font-size="19" class="sf it">São Paulo, Brazil</text>'
              "</g></g>")
     q = ["If it can be", "deterministic,", "it should not", "be inference."]
     for i, l in enumerate(q):
-        b.append(f'<g class="w" {D(1500+i*180)}>' + txt(590, 392 + i * 44, l, "sf pp", 42) + "</g>")
-    return lib.svg("osHero", W, 600, "".join(b), css("osHero"),
+        b.append(f'<g class="w" {D(1300+i*150)}>' + txt(590, 318 + i * 38, l, "sf pp", 37) + "</g>")
+    return lib.svg("osHero", W, H, "".join(b), css("osHero"),
                    "Pix receipt for Rafael Pereira, Software Engineer at Getnet: Event-Driven Architecture enthusiast, gRPC user, Java enthusiast, Rust for high performance, focused on AI token minimizing with deterministic solutions.")
 
 
 # ------------------------------------------------------------------ focus (paper tape)
 def focus() -> str:
-    H, T, TH = 514, 150, 250
+    H, T, TH = 500, 104, 214
     b = [f'<rect width="{W}" height="{H}" rx="6" fill="{PAPER}" stroke="{RULE}"/>']
-    b.append(f'<g class="w" {D(0)}>' + txt(40, 76, "Event-Driven Architecture", "sf", 52) + "</g>")
-    b.append(f'<g class="w" {D(140)}>' + txt(40, 108, "Regulated Open Finance APIs with strict P95/P99 and TPS targets", "mu", 14) + "</g>")
-    b.append(f'<g class="w" {D(250)}><rect x="0" y="{T}" width="{W}" height="{TH}" fill="{TAPE}"/>')
+    b.append(f'<g class="w" {D(0)}>' + txt(40, 60, "How I build", "sf", 44) + "</g>")
+    b.append(f'<g class="w" {D(120)}>' + txt(40, 86, "Open Finance APIs under P95/P99 and TPS targets · RabbitMQ · Azure Service Bus · Event Hubs", "mu", 13) + "</g>")
+    b.append(f'<g class="w" {D(220)}><rect x="0" y="{T}" width="{W}" height="{TH}" fill="{TAPE}"/>')
     for yy in (T + 12, T + TH - 12):
         for x in range(16, W, 22):
             b.append(f'<circle cx="{x}" cy="{yy}" r="3.2" fill="{PAPER}"/>')
     b.append("</g>")
-    m = T + 92                      # main axis
-    ca, cb = m - 42, m + 42         # consumers
-    dq = T + TH - 52 - 12 + 6       # dlq centre
+    m = T + 84                      # main axis
+    ca, cb = m - 40, m + 40         # consumers
+    dq = m + 78                     # dlq centre
     ar = f'<marker id="osA" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="{INK}"/></marker>'
     arr = f'<marker id="osR" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="{RED}"/></marker>'
     ln = f'fill="none" stroke="{INK}" stroke-width="1.6" marker-end="url(#osA)"'
@@ -180,55 +176,38 @@ def focus() -> str:
     b.append(node(bx["con"], ca, 160, "CONSUMER A", "idempotent", 740))
     b.append(node(bx["con"], cb, 160, "CONSUMER B", "idempotent", 800))
     b.append(node(bx["brk"], dq, nw, "DLQ", "retry with backoff", 880, True))
-    # typed caption
-    cap = ["RabbitMQ  ·  Azure Service Bus  ·  Azure Event Hubs",
-           "transactional outbox  ·  idempotent consumers  ·  DLQ with retry",
-           "gRPC on one canonical Protobuf contract"]
-    for i, c in enumerate(cap):
-        b.append(f'<g class="w" {D(1200+i*140)}>' + txt(40, T + TH + 40 + i * 24, c, "b" if i == 0 else "mu", 14) + "</g>")
+    # token strip: what runs before the model
+    y0 = T + TH + 44
+    b.append(f'<g class="w" {D(1150)}>' + txt(40, y0, "Before the model", "sf it", 30)
+             + txt(W - 40, y0, "fewer tokens, same answer", "mu", 13, "end") + "</g>")
+    b.append(f'<line class="w" {D(1200)} x1="40" y1="{y0+16}" x2="{W-40}" y2="{y0+16}" stroke="{RED}" stroke-width="1.6"/>')
+    steps = [("CAG cache", ["answered from", "cache"]), ("Scripts", ["plain code,", "exact answer"]),
+             ("Qdrant", ["only the context", "that matters"]), ("Jev / Laya", ["routes to the", "cheapest model"]),
+             ("Model", ["only what", "is left"])]
+    cw = (W - 80) / len(steps)
+    for i, (nm, ds) in enumerate(steps):
+        x = 40 + i * cw
+        last = i == len(steps) - 1
+        g_ = [txt(x, y0 + 50, f"{i+1}", "mu b", 13), txt(x + 18, y0 + 50, nm, "b rd" if last else "b", 16)]
+        g_ += [txt(x, y0 + 74 + k * 18, l, "mu", 12.5) for k, l in enumerate(ds)]
+        if not last:
+            g_.append(txt(x + cw - 18, y0 + 50, "→", "mu", 16))
+        b.append(f'<g class="w" {D(1300 + i * 110)}>' + "".join(g_) + "</g>")
     return lib.svg("osFocus", W, H, "".join(b), css("osFocus"),
-                   "Event flow on paper tape: API writes to an outbox in the same transaction, the broker fans out to two idempotent consumers, failures go to a DLQ and retry back to the broker.", ar + arr)
-
-
-# ------------------------------------------------------------------ tokens (index card)
-def tokens() -> str:
-    H = 420
-    b = [f'<rect width="{W}" height="{H}" rx="6" fill="{PAPER}" stroke="{RULE}"/>']
-    b.append(f'<g class="w" {D(0)}>' + txt(40, 78, "If it can be deterministic,", "sf", 52) + "</g>")
-    b.append(f'<g class="w" {D(140)}>' + txt(40, 134, "it should not be inference.", "sf it", 52) + "</g>")
-    b.append(f'<line class="w" {D(300)} x1="0" y1="162" x2="{W}" y2="162" stroke="{RED}" stroke-width="2"/>')
-    rows = [("1", "CAG cache", "Answered from cache. No model call."),
-            ("2", "Scripts", "Plain code returns the exact answer."),
-            ("3", "Qdrant", "Retrieve from the vector DB instead of re-reading."),
-            ("4", "Jev / Laya", "Route the task to the cheapest model that fits."),
-            ("5", "Model", "Only what is left.")]
-    y = 208
-    for i, (n, nm, ds) in enumerate(rows):
-        d = 450 + i * 150
-        b.append(f'<line class="w" {D(d)} x1="0" y1="{y+14}" x2="{W}" y2="{y+14}" stroke="{RULE}" stroke-width="1.2"/>')
-        last = i == len(rows) - 1
-        b.append(f'<g class="w" {D(d)}>' + txt(40, y, n, "mu b", 18) + txt(78, y, nm, "b", 20)
-                 + txt(250, y, ds, "", 15.5) + "</g>")
-        y += 46
-    # stamp on the last row
-    b.append(f'<g transform="translate(724 {y-46-4}) rotate(-6)"><g class="f" {D(1500)}>'
-             f'<rect x="-70" y="-22" width="140" height="42" rx="3" fill="none" stroke="{RED}" stroke-width="3"/>'
-             f'<text x="0" y="8" text-anchor="middle" font-size="20" class="b rd" style="letter-spacing:.08em">LAST</text></g></g>')
-    return lib.svg("osTokens", W, H, "".join(b), css("osTokens"),
-                   "Index card: CAG cache, scripts, Qdrant and Jev / Laya routing come before the model, which only gets what is left.")
+                   "How I build: API writes to an outbox in the same transaction, the broker fans out to two idempotent consumers, failures go to a DLQ and retry. Before the model: CAG cache, scripts, Qdrant, Jev / Laya routing, then the model gets only what is left.", ar + arr)
 
 
 # ------------------------------------------------------------------ projects (catalog cards)
 def projects() -> str:
     s = lib.summary(lib.data())
     rl = s["repo_lang"]
-    items = [("poc-grpc", "gRPC proof of concept. Client and server share one Protobuf contract."),
-             ("grpc-common", "The canonical Protobuf contract library. One schema for every team and stack."),
-             ("grpc-server", "Server side of the gRPC POC, built on the shared contract."),
-             ("Demo-SpringSecurity6-JWT", "Stateless auth with Spring Security 6 and JWT."),
+    items = [("poc-grpc", "Client and server on one shared Protobuf contract."),
+             ("grpc-common", "The canonical Protobuf library for every team."),
+             ("grpc-server", "Server side of the gRPC POC."),
+             ("Demo-SpringSecurity6-JWT", "Stateless auth: Spring Security 6 and JWT."),
              ("spring-and-vue", "Spring Boot API with a Vue front end."),
              ("Capstone-Project", "AWS Academy Cloud Architecting capstone.")]
-    cw, ch, g, m = 264, 176, 14, 20
+    cw, ch, g, m = 264, 124, 14, 20
     H = m * 2 + ch * 2 + g
     b = [f'<rect width="{W}" height="{H}" rx="6" fill="#2a2722"/>']
     for i, (nm, ds) in enumerate(items):
@@ -239,49 +218,18 @@ def projects() -> str:
         g_ = [f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" rx="3" fill="{PAPER}"/>',
               txt(x + 16, y + 28, nm, "b", 14.5),
               f'<line x1="{x}" y1="{y+40}" x2="{x+cw}" y2="{y+40}" stroke="{RED}" stroke-width="1.6"/>']
-        for k, line in enumerate(textwrap.wrap(ds, 29)[:4]):
-            yy = y + 66 + k * 22
+        for k, line in enumerate(textwrap.wrap(ds, 31)[:2]):
+            yy = y + 64 + k * 21
             g_.append(txt(x + 16, yy, line, "", 12.5))
-        for k in range(4):
-            yy = y + 66 + k * 22 + 6
+        for k in range(2):
+            yy = y + 64 + k * 21 + 6
             g_.append(f'<line x1="{x}" y1="{yy}" x2="{x+cw}" y2="{yy}" stroke="{RULE}" stroke-width="1"/>')
         if lang:
-            g_.append(txt(x + 16, y + ch - 40, lang, "mu b", 12))
-        g_.append(f'<circle cx="{x+cw/2}" cy="{y+ch-18}" r="6" fill="#2a2722"/>')
+            g_.append(txt(x + 16, y + ch - 12, lang, "mu b", 11.5))
+        g_.append(f'<circle cx="{x+cw/2}" cy="{y+ch-14}" r="5" fill="#2a2722"/>')
         b.append(f'<g class="f" {D(d)}>' + "".join(g_) + "</g>")
     return lib.svg("osProj", W, H, "".join(b), css("osProj"),
                    "Library catalog cards: poc-grpc, grpc-common, grpc-server, Demo-SpringSecurity6-JWT, spring-and-vue, Capstone-Project.")
-
-
-# ------------------------------------------------------------------ stats (receipt totals)
-def stats() -> str:
-    s = lib.summary(lib.data())
-    H = 400
-    b = [f'<rect width="{W}" height="{H}" rx="6" fill="{PAPER}" stroke="{RULE}"/>']
-    b.append(f'<g class="w" {D(0)}>' + txt(40, 72, "Totals", "sf it", 46) + "</g>")
-    rows = [("CONTRIBUTIONS", s["contributions"]), ("COMMITS", s["commits"]), ("ACTIVE DAYS", s["active_days"]),
-            ("BUSIEST DAY", s["busiest"]), ("PUBLIC REPOS", s["repos"]), ("FOLLOWERS", s["followers"])]
-    y = 126
-    xl, xr = 40, 410
-    for i, (l, v) in enumerate(rows):
-        b.append(row(xl, xr, y, l, str(v), 17, 150 + i * 110, rcls="b"))
-        y += 40
-    b.append(f'<line class="w" {D(900)} x1="{xl}" y1="{y-18}" x2="{xr}" y2="{y-18}" stroke="{INK}" stroke-width="3"/>')
-    b.append(f'<line class="w" {D(900)} x1="{xl}" y1="{y-13}" x2="{xr}" y2="{y-13}" stroke="{INK}" stroke-width="1"/>')
-    b.append(f'<g class="w" {D(1000)}>' + txt(xl, y + 8, "LAST 53 WEEKS", "mu", 13) + "</g>")
-    # right column: big figure + language bars
-    b.append(f'<g class="w" {D(300)}>' + txt(470, 190, str(s["contributions"]), "sf", 150) + "</g>")
-    b.append(f'<g class="w" {D(450)}>' + txt(472, 222, "contributions on GitHub", "mu", 14) + "</g>")
-    yy = 268
-    for i, (n, sh, _c) in enumerate(s["stack"][:5]):
-        d = 700 + i * 110
-        bw = max(4, 200 * sh / s["stack"][0][1])
-        b.append(f'<g class="w" {D(d)}>' + txt(470, yy, n, "b", 13)
-                 + f'<rect x="570" y="{yy-11}" width="{bw:.0f}" height="12" fill="{INK}"/>'
-                 + txt(830, yy, f"{sh*100:.0f}%", "mu", 13, "end") + "</g>")
-        yy += 24
-    return lib.svg("osStats", W, H, "".join(b), css("osStats"),
-                   f"Totals: {s['contributions']} contributions, {s['commits']} commits, {s['active_days']} active days, {s['repos']} public repos.")
 
 
 # ------------------------------------------------------------------ punched card
@@ -297,7 +245,8 @@ def punch() -> str:
     cut = 34
     card = f"M{cut},0 H{W} V{H} H0 V{cut} Z"
     b = [f'<path d="{card}" fill="#efe6cf" stroke="{RULE}"/>']
-    b.append(f'<g class="w" {D(0)}>' + txt(46, 44, "RAFAEL PEREIRA", "b", 15) + txt(814, 44, f"{s['contributions']} CONTRIBUTIONS", "b", 15, "end") + "</g>")
+    head = f"{s['contributions']} CONTRIBUTIONS · {s['commits']} COMMITS · {s['active_days']} ACTIVE DAYS"
+    b.append(f'<g class="w" {D(0)}>' + txt(46, 44, head, "b", 15) + txt(814, 44, "LAST 12 MONTHS", "mu", 13, "end") + "</g>")
     b.append(f'<line x1="0" y1="62" x2="{W}" y2="62" stroke="{RULE}"/>')
     last = ""
     for i, w in enumerate(weeks):
@@ -317,7 +266,8 @@ def punch() -> str:
                 hw, hh = 3 + L * 0.9, 8 + L * 1.6
                 g_.append(f'<rect x="{cx-hw/2:.1f}" y="{cy-hh/2:.1f}" width="{hw:.1f}" height="{hh:.1f}" rx="1" fill="{DESK}"/>')
         b.append(f'<g class="f" {D(250 + i * 16)}>' + "".join(g_) + "</g>")
-    b.append(txt(46, 282, "ONE HOLE = A DAY WITH CONTRIBUTIONS · A BIGGER HOLE = MORE", "mu", 12))
+    mix = " · ".join(f"{n.upper()} {sh*100:.0f}%" for n, sh, _c in s["stack"][:4])
+    b.append(f'<g class="w" {D(1100)}>' + txt(46, 282, mix, "b", 12.5) + txt(814, 282, "A BIGGER HOLE = MORE", "mu", 12, "end") + "</g>")
     return lib.svg("osPunch", W, H, "".join(b), css("osPunch"),
                    f"Punched card of the last 53 weeks: a hole for every day with contributions, {s['active_days']} active days.")
 
@@ -347,8 +297,11 @@ def record() -> str:
 
 
 def build(out_dir: Path) -> None:
-    for n, f in [("hero", hero), ("focus", focus), ("tokens", tokens), ("projects", projects),
-                 ("stats", stats), ("punch", punch), ("record", record)]:
+    # Five cards: the token strip lives in focus, the totals in the punched card header.
+    for old in ("tokens.svg", "stats.svg"):
+        (out_dir / old).unlink(missing_ok=True)
+    for n, f in [("hero", hero), ("record", record), ("focus", focus),
+                 ("projects", projects), ("punch", punch)]:
         write(out_dir, f"{n}.svg", f())
 
 
