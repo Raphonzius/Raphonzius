@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="262" viewBox="0 0 860 262" role="img" aria-label="Language stack">
+<defs>
+  <linearGradient id="stack-bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#070b1a"/><stop offset=".55" stop-color="#0f1a33"/><stop offset="1" stop-color="#0a1226"/>
+  </linearGradient>
+  <radialGradient id="stack-o1"><stop offset="0" stop-color="#2dd4bf" stop-opacity=".45"/><stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/></radialGradient>
+  <radialGradient id="stack-o2"><stop offset="0" stop-color="#a78bfa" stop-opacity=".40"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
+  <radialGradient id="stack-o3"><stop offset="0" stop-color="#f59e0b" stop-opacity=".22"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
+  <linearGradient id="stack-edge" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#2dd4bf" stop-opacity=".9"/><stop offset=".5" stop-color="#a78bfa" stop-opacity=".5"/><stop offset="1" stop-color="#f59e0b" stop-opacity=".8"/>
+  </linearGradient>
+  <clipPath id="stack-clip"><rect width="860" height="262" rx="18"/></clipPath>
+</defs>
+<style>
+  #stack text { font-family: 'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif; }
+  #stack .mono { font-family: 'JetBrains Mono','Cascadia Code',Consolas,'Liberation Mono',monospace; }
+  #stack .o1 { animation: stack-fa 10s ease-in-out infinite; }
+  #stack .o2 { animation: stack-fb 13s ease-in-out infinite; }
+  #stack .o3 { animation: stack-fa 16s ease-in-out infinite reverse; }
+  #stack .in { animation: stack-in .7s ease-out both; }
+  #stack .cur { animation: stack-blink 1.1s step-end infinite; }
+  @keyframes stack-fa { 0%,100% { transform: translate(0,0); } 50% { transform: translate(34px,-18px); } }
+  @keyframes stack-fb { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-30px,16px); } }
+  @keyframes stack-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes stack-blink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+  #stack .b0 { animation: stack-g 1.2s cubic-bezier(.2,.8,.2,1) both 0.20s; transform-box: fill-box; transform-origin: left; }
+#stack .b1 { animation: stack-g 1.2s cubic-bezier(.2,.8,.2,1) both 0.32s; transform-box: fill-box; transform-origin: left; }
+#stack .b2 { animation: stack-g 1.2s cubic-bezier(.2,.8,.2,1) both 0.44s; transform-box: fill-box; transform-origin: left; }
+#stack .b3 { animation: stack-g 1.2s cubic-bezier(.2,.8,.2,1) both 0.56s; transform-box: fill-box; transform-origin: left; }
+#stack .b4 { animation: stack-g 1.2s cubic-bezier(.2,.8,.2,1) both 0.68s; transform-box: fill-box; transform-origin: left; }
+@keyframes stack-g { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+  @media (prefers-reduced-motion: reduce) { #stack * { animation: none !important; } }
+</style>
+<g id="stack" clip-path="url(#stack-clip)">
+  <rect width="860" height="262" fill="url(#stack-bg)"/>
+  <ellipse class="o1" cx="120" cy="30" rx="260" ry="120" fill="url(#stack-o1)"/>
+  <ellipse class="o2" cx="740" cy="242" rx="300" ry="130" fill="url(#stack-o2)"/>
+  <ellipse class="o3" cx="520" cy="10" rx="220" ry="90" fill="url(#stack-o3)"/>
+  <rect x="14" y="14" width="832" height="234" rx="14" fill="#0b1224" fill-opacity=".55" stroke="#24324f"/>
+  <rect x="14" y="14" width="832" height="2" fill="url(#stack-edge)"/>
+<text x="40" y="50" fill="#2dd4bf" font-size="11" font-weight="700" letter-spacing="3" class="mono">LANGUAGE STACK</text><text x="820" y="50" fill="#8b9bb4" font-size="11" text-anchor="end" class="mono">public repos, experiments excluded</text>
+  <circle cx="46" cy="93" r="5" fill="#38bdf8"/><text x="62" y="98" fill="#e6edf3" font-size="14" font-weight="700">Python</text><text x="250" y="98" fill="#38bdf8" font-size="13" text-anchor="end" class="mono">76%</text><rect x="272" y="86" width="470" height="14" rx="7" fill="#24324f" fill-opacity=".5"/><rect class="b0" x="272" y="86" width="358.1" height="14" rx="7" fill="#38bdf8"/><circle cx="46" cy="127" r="5" fill="#f59e0b"/><text x="62" y="132" fill="#e6edf3" font-size="14" font-weight="700">Java</text><text x="250" y="132" fill="#f59e0b" font-size="13" text-anchor="end" class="mono">16%</text><rect x="272" y="120" width="470" height="14" rx="7" fill="#24324f" fill-opacity=".5"/><rect class="b1" x="272" y="120" width="76.8" height="14" rx="7" fill="#f59e0b"/><circle cx="46" cy="161" r="5" fill="#2dd4bf"/><text x="62" y="166" fill="#e6edf3" font-size="14" font-weight="700">Shell</text><text x="250" y="166" fill="#2dd4bf" font-size="13" text-anchor="end" class="mono">5%</text><rect x="272" y="154" width="470" height="14" rx="7" fill="#24324f" fill-opacity=".5"/><rect class="b2" x="272" y="154" width="22.3" height="14" rx="7" fill="#2dd4bf"/><circle cx="46" cy="195" r="5" fill="#42b883"/><text x="62" y="200" fill="#e6edf3" font-size="14" font-weight="700">Vue</text><text x="250" y="200" fill="#42b883" font-size="13" text-anchor="end" class="mono">2%</text><rect x="272" y="188" width="470" height="14" rx="7" fill="#24324f" fill-opacity=".5"/><rect class="b3" x="272" y="188" width="10.9" height="14" rx="7" fill="#42b883"/><circle cx="46" cy="229" r="5" fill="#f1e05a"/><text x="62" y="234" fill="#e6edf3" font-size="14" font-weight="700">JavaScript</text><text x="250" y="234" fill="#f1e05a" font-size="13" text-anchor="end" class="mono">0%</text><rect x="272" y="222" width="470" height="14" rx="7" fill="#24324f" fill-opacity=".5"/><rect class="b4" x="272" y="222" width="1.9" height="14" rx="7" fill="#f1e05a"/>
+</g>
+</svg>
