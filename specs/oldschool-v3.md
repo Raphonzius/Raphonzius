@@ -71,3 +71,15 @@ No media queries are needed, and none would survive GitHub's sanitizer anyway. P
 | 6 GitHub | See the commit message: the blob page resolves `/assets/oldschool/*`. |
 
 Previews: `previews/oldschool.png` (desktop), `previews/oldschool-phone.png`, `previews/oldschool-light.png`.
+
+## 7. Reverted: responsive pairs
+
+The user rejected the left/right split ("pretty ugly"), so the layout is back to v2's full-width cards. Projects and tickets stay as half-width pairs, as in v2.
+
+What stays from v3:
+- per-card font faces (338 KB total);
+- project cards without "No. 01–04";
+- rx 10 corners;
+- the `lib.preview` options.
+
+Trade-off accepted: on a phone, full-width cards scale to ~0.4 again (R1 is not met).
