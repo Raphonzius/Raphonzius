@@ -99,15 +99,20 @@ def summary(d: dict) -> dict:
 
 
 # ------------------------------------------------------------------ fonts
-def font(family: str, weight: int = 400, italic: bool = False, alias: str | None = None) -> str:
-    """@font-face rule with an embedded, subset woff2. Cached on disk."""
+def font(family: str, weight: int = 400, italic: bool = False, alias: str | None = None,
+         text: str | None = None) -> str:
+    """@font-face rule with an embedded, subset woff2. Cached on disk.
+    `text`: subset to exactly these characters (one card's glyphs), which keeps each SVG small."""
+    import hashlib
     CACHE.mkdir(exist_ok=True)
-    key = re.sub(r"\W+", "_", f"{family}_{weight}_{int(italic)}")
+    glyphs = "".join(sorted(set(text + " "))) if text is not None else GLYPHS
+    tag = hashlib.sha1(glyphs.encode()).hexdigest()[:10] if text is not None else "all"
+    key = re.sub(r"\W+", "_", f"{family}_{weight}_{int(italic)}_{tag}")
     f = CACHE / f"{key}.woff2"
     if not f.exists():
         spec = f"{family}:ital,wght@{int(italic)},{weight}"
         url = ("https://fonts.googleapis.com/css2?family=" + urllib.parse.quote(spec, safe=":,@;")
-               + "&text=" + urllib.parse.quote(GLYPHS) + "&display=block")
+               + "&text=" + urllib.parse.quote(glyphs) + "&display=block")
         ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"
         css = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": ua}), timeout=30).read().decode()
         src = re.search(r"url\((https://[^)]+)\)", css).group(1)
