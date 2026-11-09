@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Rafael%20Pereira&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Backend%20Engineer%20%40%20Getnet&descAlignY=58&descSize=20" alt="Rafael Pereira header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Rafael%20Pereira&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Backend%20Engineer%20%40%20Getnet&descAlignY=58&descSize=20" alt="Rafael Pereira header" />
 
 <a href="https://github.com/Raphonzius">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3200&pause=900&color=2DD4BF&center=true&vCenter=true&width=720&lines=Event-Driven+Architecture+enthusiast;gRPC+user+%7C+Java+enthusiast;Rust+for+high+performance;Fewer+AI+tokens%2C+more+deterministic+solutions" alt="Typing animation" />
