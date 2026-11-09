@@ -1,76 +1,119 @@
-<h1 align="left">Hello there! 👋 I'm Rafael</h1>
-<h2 align="left">🖥️ Daily Tools</h2>
+<div align="center">
 
-<img align="left" height="300" src="https://i.pinimg.com/originals/ce/dd/e4/cedde44fb80a373242a46fb07a67e863.gif"  />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Rafael%20Pereira&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Backend%20Engineer%20%40%20Getnet&descAlignY=58&descSize=20" alt="Rafael Pereira header" />
 
-###
+<a href="https://github.com/Raphonzius">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3200&pause=900&color=2DD4BF&center=true&vCenter=true&width=720&lines=Event-Driven+Architecture+enthusiast;gRPC+user+%7C+Java+enthusiast;Rust+for+high+performance;Fewer+AI+tokens%2C+more+deterministic+solutions" alt="Typing animation" />
+</a>
 
-<div align="left">
-  <h3 align="left">&nbsp;&ensp;🛠️ Programming</h3>
-  &nbsp;&ensp;&nbsp;&ensp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="30" alt="java logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" height="30" alt="spring logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" height="30" alt="bash logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="python logo"  />
-  <h3 align="left">&nbsp;&ensp;💾 OS</h3>
-  &nbsp;&ensp;&nbsp;&ensp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" alt="linux logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/ubuntu/E95420" height="30" alt="ubuntu logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/redhat/EE0000" height="30" alt="redhat logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" height="30" alt="windows8 logo"  />
-  <h3 align="left">&nbsp;&ensp;⚙️ Utilities</h3>
-  &nbsp;&ensp;&nbsp;&ensp;&nbsp;
-  <img src="https://skillicons.dev/icons?i=aws" height="30" alt="amazonwebservices logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=git" height="30" alt="git logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/podman/podman-original.svg" height="30" alt="podman logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=jenkins" height="30" alt="jenkins logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/postman/FF6C37" height="30" alt="postman logo"  />
+<br/>
+
+![Java](https://img.shields.io/badge/Java_21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![gRPC](https://img.shields.io/badge/gRPC-244c5a?style=for-the-badge&logo=grpc&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+
 </div>
 
-<br clear="both">
+---
 
-<h2 align="left">👾 More About Me</h2>
+## `whoami`
 
-I'm a passionate technology enthusiast, always eager to learn and collaborate. My academic journey has been enriched by
-practical experiences within and beyond college walls. Here's a glimpse into my tech journey:
+```text
+$ whoami
+rafael-pereira  # Software Engineer, Getnet (Open Finance APIs)
+$ cat focus.txt
+  - Event-driven architecture: outbox, idempotent consumers, DLQ + retry, pub/sub
+  - gRPC + Protobuf as a canonical contract across teams and stacks
+  - Java / Spring Boot on low-latency microservices (P95/P99, TPS)
+  - Rust for the parts that must be fast
+  - AI agents with fewer tokens: if it can be deterministic, it should not be inference
+$ location
+  Sao Paulo, Brazil
+```
 
-### 🚀 Current Focus
+I build regulated Open Finance APIs in Java and Spring Boot. I am also an AI Champion for 9 squads, where I maintain the agent harness and run workshops.
 
-- DevOps and Knowledge Management ❤️
-    - I contribute to the Smart Logistic IT Platform Group at Samsung SDSLA, specializing in process improvement.
-    - My expertise lies in UML/BPMN diagramming and Java/WildFly/Spring development for RESTful integrations.
-    - I hold course certifications in Linux System Administration and AWS Cloud Foundations/Architecting.
+## Token-minimizing AI
 
-### 🌐 Beyond Tech
+The cheapest token is the one never sent. My rule: **push everything deterministic out of the model.**
 
-- I'm actively honing my DevOps skills through courses and guidance from my Tech Lead and Lead Developer.
-- Occasionally, my manager coaches me on commercial proposals and WBS for development projects.
+| Layer | What I use |
+|---|---|
+| Retrieval | Qdrant / vector DB, so the model sees only what matters |
+| Repeated context | CAG (cache-augmented generation) |
+| Fixed work | Scripts and fixed queries instead of model-generated ones |
+| Routing | Jev / Laya for LLM task routing: simple subtasks go to the cheap mode |
 
-### 🌱 Community Involvement
-
-- Outside of work and studies, I channel my energy into community service as a dedicated volunteer in the Scout movement ⚜️
-- From park revitalization to blood donations, I believe in the power of collective action to create positive change
-
-<h2 align="left">🌐 Find Me</h2>
+## Tech stack
 
 <div align="center">
-  <a href="mailto:rafael.informa@gmail.com" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=flat" height="35" alt="gmail logo" />
-  </a>
-  &nbsp;&ensp;&nbsp;
-  <a href="https://www.linkedin.com/in/rafaelrodriguespereira" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=flat" height="35" alt="linkedin logo" />
-  </a>
+
+<img src="https://skillicons.dev/icons?i=java,spring,rust,py,bash,vue,js,rabbitmq,azure,aws,docker,podman,githubactions,jenkins,linux,git,postman&perline=9" alt="Tech stack icons" />
+
+</div>
+
+**Messaging:** RabbitMQ, Azure Service Bus, Azure Event Hubs. **Quality:** SonarQube quality gates, Jenkins, GitHub Actions.
+
+## Featured projects
+
+<div align="center">
+
+<a href="https://github.com/Raphonzius/poc-grpc">
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Raphonzius&repo=poc-grpc&theme=tokyonight&hide_border=true" alt="poc-grpc" />
+</a>
+<a href="https://github.com/Raphonzius/grpc-common">
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Raphonzius&repo=grpc-common&theme=tokyonight&hide_border=true" alt="grpc-common" />
+</a>
+<a href="https://github.com/Raphonzius/grpc-server">
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Raphonzius&repo=grpc-server&theme=tokyonight&hide_border=true" alt="grpc-server" />
+</a>
+<a href="https://github.com/Raphonzius/Demo-SpringSecurity6-JWT">
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Raphonzius&repo=Demo-SpringSecurity6-JWT&theme=tokyonight&hide_border=true" alt="Demo-SpringSecurity6-JWT" />
+</a>
+<a href="https://github.com/Raphonzius/spring-and-vue">
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Raphonzius&repo=spring-and-vue&theme=tokyonight&hide_border=true" alt="spring-and-vue" />
+</a>
+<a href="https://github.com/Raphonzius/Capstone-Project">
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Raphonzius&repo=Capstone-Project&theme=tokyonight&hide_border=true" alt="Capstone-Project" />
+</a>
+
+</div>
+
+## Research
+
+First author of a full paper on **Event Sourcing, CQRS and gRPC for digital twins**, presented at Latinoware. Title: *Open Source LVC Simulation Architecture*.
+
+## GitHub stats
+
+<div align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=Raphonzius&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub stats" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Raphonzius&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" alt="Top languages" />
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Raphonzius&theme=tokyonight&hide_border=true" alt="Streak" />
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Raphonzius&theme=tokyo-night&hide_border=true&area=true" alt="Activity graph" />
+
+</div>
+
+## Beyond tech
+
+I volunteer in the Scout movement, from park revitalization to blood donations.
+
+## Find me
+
+<div align="center">
+
+<a href="mailto:rafael.informa@gmail.com" target="_blank">
+  <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=flat" height="35" alt="gmail logo" />
+</a>
+&nbsp;&nbsp;
+<a href="https://www.linkedin.com/in/rafaelrodriguespereira" target="_blank">
+  <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=flat" height="35" alt="linkedin logo" />
+</a>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,100:0f2027&height=100&section=footer" alt="footer" />
+
 </div>
