@@ -139,16 +139,21 @@ def preview(md_path: Path, png_path: Path, height: int = 4200, wait_ms: int = 60
     tmp.unlink()
 
     def inline(m: re.Match) -> str:
-        src = m.group(1)
+        tag = m.group(0)
+        src = re.search(r'src="([^"]+\.svg)"', tag).group(1)
+        wm = re.search(r'width="(\d+%?)"', tag)
+        width = wm.group(1) if wm else "100%"
         p = (md_path.parent / src).resolve()
         if not p.exists():
             p = (ROOT / src).resolve()
         if p.exists() and p.suffix == ".svg":
             s = p.read_text(encoding="utf-8")
-            return s.replace("<svg ", '<svg style="width:100%;height:auto;display:block" ', 1)
-        return m.group(0)
+            # honour the <img width>, like GitHub does, so side-by-side cards stay side by side
+            s = s.replace("<svg ", '<svg style="width:100%;height:auto;display:block" ', 1)
+            return f'<span style="display:inline-block;vertical-align:top;width:{width}">{s}</span>'
+        return tag
 
-    html = re.sub(r'<img[^>]*?src="([^"]+\.svg)"[^>]*>', inline, html)
+    html = re.sub(r'<img[^>]*?src="[^"]+\.svg"[^>]*>', inline, html)
     page = ("<html><head><meta charset='utf-8'><style>body{background:#0d1117;color:#e6edf3;"
             "font-family:-apple-system,Segoe UI,Arial;max-width:880px;margin:24px auto;padding:0 24px;line-height:1.5}"
             "a{color:#4493f8}h1,h2{border-bottom:1px solid #30363d;padding-bottom:.3em}img{max-width:100%}"
