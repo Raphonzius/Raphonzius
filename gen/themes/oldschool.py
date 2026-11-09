@@ -225,7 +225,7 @@ LOG = [("14:02:31", "LIVE", "bus · CHECKIN · Caio Prado"),
 
 def lvc() -> str:
     sid = "osLvc"
-    H = 712
+    H = 740  # paper bottom = 80 + (H - 122) = 698; log window ends at 674, so ~24px margin
     b = [f'<rect width="{W}" height="{H}" rx="10" fill="{DESK}"/>']
     b.append(f'<path d="M24,64 V50 Q24,36 38,36 H306 Q318,36 324,48 L332,64 Z" fill="{FOLD_E}"/>')
     b.append(sheet(sid, f'<rect x="24" y="62" width="{W-48}" height="{H-86}" rx="5"', "F"))
