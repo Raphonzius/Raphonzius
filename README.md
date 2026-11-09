@@ -1,4 +1,9 @@
 <h1 align="left">Hello there! 👋 I'm Rafael</h1>
+
+<p align="center">
+  <img src="assets/hero.svg" width="100%" alt="Rafael Pereira, Software Engineer at Getnet. Event-Driven Architecture enthusiast, gRPC user, Java enthusiast, Rust for high performance." />
+</p>
+
 <h2 align="left">🖥️ Daily Tools</h2>
 
 <img align="left" height="300" src="https://i.pinimg.com/originals/ce/dd/e4/cedde44fb80a373242a46fb07a67e863.gif"  />
@@ -48,10 +53,52 @@ practical experiences within and beyond college walls. Here's a glimpse into my 
 
 ### 🚀 Current Focus
 
-- DevOps and Knowledge Management ❤️
-    - I contribute to the Smart Logistic IT Platform Group at Samsung SDSLA, specializing in process improvement.
-    - My expertise lies in UML/BPMN diagramming and Java/WildFly/Spring development for RESTful integrations.
-    - I hold course certifications in Linux System Administration and AWS Cloud Foundations/Architecting.
+- Event-Driven Architecture ❤️
+    - I build regulated Open Finance APIs in Java and Spring Boot at Getnet, with strict P95/P99 latency and TPS targets.
+    - Transactional outbox, idempotent consumers, DLQ with retry and pub/sub on RabbitMQ, Azure Service Bus and Event Hubs.
+    - gRPC with a Protobuf library that keeps every team and stack on one canonical contract.
+    - Java enthusiast, and Rust for the parts that need high performance.
+
+<p align="center">
+  <img src="assets/event-flow.svg" width="100%" alt="Animated event flow: Pix API, outbox, broker, two idempotent consumers, and a DLQ that retries back to the broker." />
+</p>
+
+- AI token minimizing with deterministic solutions 🤖
+    - AI Champion for 9 squads: I maintain their AI agent harness and run workshops every two weeks.
+    - If it can be deterministic, it should not be inference: Qdrant / vector DB, scripts, caches (CAG) and Jev / Laya for LLM task routing.
+
+<p align="center">
+  <img src="assets/token-budget.svg" width="100%" alt="Token budget: raw request shrinks through CAG cache, scripts, Qdrant and Jev / Laya routing before reaching the model." />
+</p>
+
+### 🧩 Featured Projects
+
+<p align="center">
+  <a href="https://github.com/Raphonzius?tab=repositories">
+    <img src="assets/projects.svg" width="100%" alt="Featured projects: poc-grpc, grpc-common, grpc-server, Demo-SpringSecurity6-JWT, spring-and-vue, Capstone-Project." />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Raphonzius/poc-grpc">poc-grpc</a> ·
+  <a href="https://github.com/Raphonzius/grpc-common">grpc-common</a> ·
+  <a href="https://github.com/Raphonzius/grpc-server">grpc-server</a> ·
+  <a href="https://github.com/Raphonzius/Demo-SpringSecurity6-JWT">Demo-SpringSecurity6-JWT</a> ·
+  <a href="https://github.com/Raphonzius/spring-and-vue">spring-and-vue</a> ·
+  <a href="https://github.com/Raphonzius/Capstone-Project">Capstone-Project</a>
+</p>
+
+### 📄 Research
+
+- First author of a full paper on Event Sourcing, CQRS and gRPC for digital twins (*Open Source LVC Simulation Architecture*), presented at Latinoware.
+
+### 📊 Profile Signal
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Raphonzius/Raphonzius/output/stats.svg" width="100%" alt="GitHub stats, refreshed daily" />
+  <img src="https://raw.githubusercontent.com/Raphonzius/Raphonzius/output/stack.svg" width="100%" alt="Language stack, refreshed daily" />
+  <img src="https://raw.githubusercontent.com/Raphonzius/Raphonzius/output/stream.svg" width="100%" alt="Contribution calendar drawn as an event stream" />
+</p>
 
 ### 🌐 Beyond Tech
 
