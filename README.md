@@ -58,28 +58,14 @@ The cheapest token is the one never sent. My rule: **push everything determinist
 
 ## Featured projects
 
-<div align="center">
-
-<a href="https://github.com/Raphonzius/poc-grpc">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Raphonzius&repo=poc-grpc&theme=tokyonight&hide_border=true" alt="poc-grpc" />
-</a>
-<a href="https://github.com/Raphonzius/grpc-common">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Raphonzius&repo=grpc-common&theme=tokyonight&hide_border=true" alt="grpc-common" />
-</a>
-<a href="https://github.com/Raphonzius/grpc-server">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Raphonzius&repo=grpc-server&theme=tokyonight&hide_border=true" alt="grpc-server" />
-</a>
-<a href="https://github.com/Raphonzius/Demo-SpringSecurity6-JWT">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Raphonzius&repo=Demo-SpringSecurity6-JWT&theme=tokyonight&hide_border=true" alt="Demo-SpringSecurity6-JWT" />
-</a>
-<a href="https://github.com/Raphonzius/spring-and-vue">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Raphonzius&repo=spring-and-vue&theme=tokyonight&hide_border=true" alt="spring-and-vue" />
-</a>
-<a href="https://github.com/Raphonzius/Capstone-Project">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Raphonzius&repo=Capstone-Project&theme=tokyonight&hide_border=true" alt="Capstone-Project" />
-</a>
-
-</div>
+| Project | Stack | What it shows |
+|---|---|---|
+| [**poc-grpc**](https://github.com/Raphonzius/poc-grpc) | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![gRPC](https://img.shields.io/badge/gRPC-244c5a?style=flat-square&logo=grpc&logoColor=white) | gRPC proof of concept with a shared Protobuf contract |
+| [**grpc-common**](https://github.com/Raphonzius/grpc-common) | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![Protobuf](https://img.shields.io/badge/Protobuf-4285F4?style=flat-square&logo=google&logoColor=white) | Canonical Protobuf contract library |
+| [**grpc-server**](https://github.com/Raphonzius/grpc-server) | ![gRPC](https://img.shields.io/badge/gRPC-244c5a?style=flat-square&logo=grpc&logoColor=white) | gRPC server side of the POC |
+| [**Demo-SpringSecurity6-JWT**](https://github.com/Raphonzius/Demo-SpringSecurity6-JWT) | ![Spring](https://img.shields.io/badge/Spring_Security_6-6DB33F?style=flat-square&logo=springsecurity&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white) | Stateless auth with Spring Security 6 and JWT |
+| [**spring-and-vue**](https://github.com/Raphonzius/spring-and-vue) | ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white) ![Vue](https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white) | Full stack: Spring API with a Vue front end |
+| [**Capstone-Project**](https://github.com/Raphonzius/Capstone-Project) | ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white) | AWS Academy Cloud Architecting capstone |
 
 ## Research
 
@@ -89,12 +75,14 @@ First author of a full paper on **Event Sourcing, CQRS and gRPC for digital twin
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=Raphonzius&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub stats" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Raphonzius&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" alt="Top languages" />
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Raphonzius&theme=tokyonight" alt="Profile details" />
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Raphonzius&theme=tokyonight" alt="Repos per language" />
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Raphonzius&theme=tokyonight" alt="Stats" />
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Raphonzius&theme=tokyonight" alt="Productive time" />
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Raphonzius&theme=tokyonight&hide_border=true" alt="Streak" />
+<img src="https://streak-stats.demolab.com/?user=Raphonzius&theme=tokyonight&hide_border=true" alt="Streak" />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Raphonzius&theme=tokyo-night&hide_border=true&area=true" alt="Activity graph" />
+<img src="https://ghchart.rshah.org/2dd4bf/Raphonzius" alt="Contribution chart" />
 
 </div>
 
