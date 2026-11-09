@@ -129,7 +129,9 @@ def svg(sid: str, w: int, h: int, body: str, css: str = "", label: str = "", def
 EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 
 
-def preview(md_path: Path, png_path: Path, height: int = 4200, wait_ms: int = 6000) -> None:
+def preview(md_path: Path, png_path: Path, height: int = 4200, wait_ms: int = 6000, static: bool = False) -> None:
+    """static=True turns CSS animations off, so the shot shows every card's resting (final) state.
+    Headless capture otherwise often lands mid-entrance."""
     """GitHub-markdown render of md_path with local SVGs inlined, screenshot to png_path.
     Uses `gh api markdown`, so `gh` must be logged in."""
     md = md_path.read_text(encoding="utf-8")
@@ -145,7 +147,7 @@ def preview(md_path: Path, png_path: Path, height: int = 4200, wait_ms: int = 60
         width = wm.group(1) if wm else "100%"
         p = (md_path.parent / src).resolve()
         if not p.exists():
-            p = (ROOT / src).resolve()
+            p = (ROOT / src.lstrip("/")).resolve()  # "/assets/..." is repo-root relative on GitHub
         if p.exists() and p.suffix == ".svg":
             s = p.read_text(encoding="utf-8")
             # honour the <img width>, like GitHub does, so side-by-side cards stay side by side
@@ -157,7 +159,8 @@ def preview(md_path: Path, png_path: Path, height: int = 4200, wait_ms: int = 60
     page = ("<html><head><meta charset='utf-8'><style>body{background:#0d1117;color:#e6edf3;"
             "font-family:-apple-system,Segoe UI,Arial;max-width:880px;margin:24px auto;padding:0 24px;line-height:1.5}"
             "a{color:#4493f8}h1,h2{border-bottom:1px solid #30363d;padding-bottom:.3em}img{max-width:100%}"
-            "p{margin:0 0 16px}</style></head><body>" + html + "</body></html>")
+            "p{margin:0 0 16px}" + ("*{animation:none!important}" if static else "")
+            + "</style></head><body>" + html + "</body></html>")
     hp = png_path.with_suffix(".html")
     hp.write_text(page, encoding="utf-8")
     subprocess.run([EDGE, "--headless", "--disable-gpu", "--hide-scrollbars", f"--virtual-time-budget={wait_ms}",
