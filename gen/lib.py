@@ -134,11 +134,13 @@ def svg(sid: str, w: int, h: int, body: str, css: str = "", label: str = "", def
 EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 
 
-def preview(md_path: Path, png_path: Path, height: int = 4200, wait_ms: int = 6000, static: bool = False) -> None:
-    """static=True turns CSS animations off, so the shot shows every card's resting (final) state.
-    Headless capture otherwise often lands mid-entrance."""
+def preview(md_path: Path, png_path: Path, height: int = 4200, wait_ms: int = 6000, static: bool = False,
+            width: int = 930, bg: str = "#0d1117", reduced_motion: bool = False, column: int = 880) -> None:
     """GitHub-markdown render of md_path with local SVGs inlined, screenshot to png_path.
-    Uses `gh api markdown`, so `gh` must be logged in."""
+    Uses `gh api markdown`, so `gh` must be logged in.
+    static=True turns CSS animations off, so the shot shows every card's resting (final) state;
+    headless capture otherwise often lands mid-entrance. width: browser window (400 ~ a phone).
+    bg: page colour (#ffffff for GitHub light). reduced_motion: emulate prefers-reduced-motion."""
     md = md_path.read_text(encoding="utf-8")
     tmp = png_path.with_suffix(".req.json")
     tmp.write_text(json.dumps({"text": md, "mode": "markdown"}), encoding="utf-8")
@@ -149,7 +151,8 @@ def preview(md_path: Path, png_path: Path, height: int = 4200, wait_ms: int = 60
         tag = m.group(0)
         src = re.search(r'src="([^"]+\.svg)"', tag).group(1)
         wm = re.search(r'width="(\d+%?)"', tag)
-        width = wm.group(1) if wm else "100%"
+        w_attr = wm.group(1) if wm else "100%"
+        w_css = w_attr if w_attr.endswith("%") else f"{w_attr}px"
         p = (md_path.parent / src).resolve()
         if not p.exists():
             p = (ROOT / src.lstrip("/")).resolve()  # "/assets/..." is repo-root relative on GitHub
@@ -157,17 +160,22 @@ def preview(md_path: Path, png_path: Path, height: int = 4200, wait_ms: int = 60
             s = p.read_text(encoding="utf-8")
             # honour the <img width>, like GitHub does, so side-by-side cards stay side by side
             s = s.replace("<svg ", '<svg style="width:100%;height:auto;display:block" ', 1)
-            return f'<span style="display:inline-block;vertical-align:top;width:{width}">{s}</span>'
+            # GitHub: <img width="410"> plus img{max-width:100%}; same here, so pairs wrap on narrow windows
+            return f'<span style="display:inline-block;vertical-align:top;width:{w_css};max-width:100%">{s}</span>'
         return tag
 
     html = re.sub(r'<img[^>]*?src="[^"]+\.svg"[^>]*>', inline, html)
-    page = ("<html><head><meta charset='utf-8'><style>body{background:#0d1117;color:#e6edf3;"
-            "font-family:-apple-system,Segoe UI,Arial;max-width:880px;margin:24px auto;padding:0 24px;line-height:1.5}"
+    fg = "#1f2328" if bg.lower() in ("#fff", "#ffffff") else "#e6edf3"
+    page = ("<html><head><meta charset='utf-8'><style>body{background:" + bg + ";color:" + fg + ";"
+            "font-family:-apple-system,Segoe UI,Arial;max-width:" + str(column) + "px;margin:24px auto;padding:0 16px;line-height:1.5}"
             "a{color:#4493f8}h1,h2{border-bottom:1px solid #30363d;padding-bottom:.3em}img{max-width:100%}"
             "p{margin:0 0 16px}" + ("*{animation:none!important}" if static else "")
             + "</style></head><body>" + html + "</body></html>")
     hp = png_path.with_suffix(".html")
     hp.write_text(page, encoding="utf-8")
-    subprocess.run([EDGE, "--headless", "--disable-gpu", "--hide-scrollbars", f"--virtual-time-budget={wait_ms}",
-                    f"--window-size=930,{height}", f"--screenshot={png_path}", hp.as_uri()], capture_output=True)
+    args = [EDGE, "--headless", "--disable-gpu", "--hide-scrollbars", f"--virtual-time-budget={wait_ms}",
+            f"--window-size={width},{height}", f"--screenshot={png_path}"]
+    if reduced_motion:
+        args.append("--force-prefers-reduced-motion")
+    subprocess.run(args + [hp.as_uri()], capture_output=True)
     hp.unlink()
