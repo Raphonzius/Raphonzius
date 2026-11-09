@@ -1,123 +1,32 @@
-<h1 align="left">Hello there! 👋 I'm Rafael</h1>
-
 <p align="center">
-  <img src="assets/hero.svg" width="100%" alt="Rafael Pereira, Software Engineer at Getnet. Event-Driven Architecture enthusiast, gRPC user, Java enthusiast, Rust for high performance." />
-</p>
-
-<h2 align="left">🖥️ Daily Tools</h2>
-
-<img align="left" height="300" src="https://i.pinimg.com/originals/ce/dd/e4/cedde44fb80a373242a46fb07a67e863.gif"  />
-
-###
-
-<div align="left">
-  <h3 align="left">&nbsp;&ensp;🛠️ Programming</h3>
-  &nbsp;&ensp;&nbsp;&ensp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="30" alt="java logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" height="30" alt="spring logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" height="30" alt="bash logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="python logo"  />
-  <h3 align="left">&nbsp;&ensp;💾 OS</h3>
-  &nbsp;&ensp;&nbsp;&ensp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" alt="linux logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/ubuntu/E95420" height="30" alt="ubuntu logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/redhat/EE0000" height="30" alt="redhat logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" height="30" alt="windows8 logo"  />
-  <h3 align="left">&nbsp;&ensp;⚙️ Utilities</h3>
-  &nbsp;&ensp;&nbsp;&ensp;&nbsp;
-  <img src="https://skillicons.dev/icons?i=aws" height="30" alt="amazonwebservices logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=git" height="30" alt="git logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/podman/podman-original.svg" height="30" alt="podman logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=jenkins" height="30" alt="jenkins logo"  />
-  <img width="12" />
-  <img src="https://cdn.simpleicons.org/postman/FF6C37" height="30" alt="postman logo"  />
-</div>
-
-<br clear="both">
-
-<h2 align="left">👾 More About Me</h2>
-
-I'm a passionate technology enthusiast, always eager to learn and collaborate. My academic journey has been enriched by
-practical experiences within and beyond college walls. Here's a glimpse into my tech journey:
-
-### 🚀 Current Focus
-
-- Event-Driven Architecture ❤️
-    - I build regulated Open Finance APIs in Java and Spring Boot at Getnet, with strict P95/P99 latency and TPS targets.
-    - Transactional outbox, idempotent consumers, DLQ with retry and pub/sub on RabbitMQ, Azure Service Bus and Event Hubs.
-    - gRPC with a Protobuf library that keeps every team and stack on one canonical contract.
-    - Java enthusiast, and Rust for the parts that need high performance.
-
-<p align="center">
-  <img src="assets/event-flow.svg" width="100%" alt="Animated event flow: Pix API, outbox, broker, two idempotent consumers, and a DLQ that retries back to the broker." />
-</p>
-
-- AI token minimizing with deterministic solutions 🤖
-    - AI Champion for 9 squads: I maintain their AI agent harness and run workshops every two weeks.
-    - If it can be deterministic, it should not be inference: Qdrant / vector DB, scripts, caches (CAG) and Jev / Laya for LLM task routing.
-
-<p align="center">
-  <img src="assets/token-budget.svg" width="100%" alt="Token budget: raw request shrinks through CAG cache, scripts, Qdrant and Jev / Laya routing before reaching the model." />
-</p>
-
-### 🧩 Featured Projects
-
-<p align="center">
-  <a href="https://github.com/Raphonzius?tab=repositories">
-    <img src="assets/projects.svg" width="100%" alt="Featured projects: poc-grpc, grpc-common, grpc-server, Demo-SpringSecurity6-JWT, spring-and-vue, Capstone-Project." />
-  </a>
+  <a href="https://www.linkedin.com/in/rafaelrodriguespereira"><img src="/assets/hero.svg" width="100%" alt="Hello there! I'm Rafael Pereira, Software Engineer at Getnet: Event-Driven Architecture enthusiast, gRPC user, Java enthusiast, Rust for high performance, AI tokens minimized. Tagline: if it can be deterministic, it should not be inference. Opens LinkedIn." /></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Raphonzius/poc-grpc">poc-grpc</a> ·
-  <a href="https://github.com/Raphonzius/grpc-common">grpc-common</a> ·
-  <a href="https://github.com/Raphonzius/grpc-server">grpc-server</a> ·
-  <a href="https://github.com/Raphonzius/Demo-SpringSecurity6-JWT">Demo-SpringSecurity6-JWT</a> ·
-  <a href="https://github.com/Raphonzius/spring-and-vue">spring-and-vue</a> ·
-  <a href="https://github.com/Raphonzius/Capstone-Project">Capstone-Project</a>
+  <a href="https://tcc-modern-lvc-arch.github.io/latinoware2026/"><img src="/assets/lvc.svg" width="100%" alt="Full paper, Latinoware 2026: Open Source LVC Simulation Architecture. Event Sourcing, CQRS and one gRPC contract for Java, Python and Rust, in six open source modules. Proceedings coming soon. Opens the paper site." /></a>
 </p>
-
-### 📄 Research
-
-- First author of a full paper on Event Sourcing, CQRS and gRPC for digital twins (*Open Source LVC Simulation Architecture*), presented at Latinoware.
-
-### 📊 Profile Signal
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Raphonzius/Raphonzius/output/stats.svg" width="100%" alt="GitHub stats, refreshed daily" />
-  <img src="https://raw.githubusercontent.com/Raphonzius/Raphonzius/output/stack.svg" width="100%" alt="Language stack, refreshed daily" />
-  <img src="https://raw.githubusercontent.com/Raphonzius/Raphonzius/output/stream.svg" width="100%" alt="Contribution calendar drawn as an event stream" />
+  <a href="https://github.com/tcc-modern-lvc-arch"><img src="/assets/link-code.svg" width="49%" alt="Open the source code on GitHub: github.com/tcc-modern-lvc-arch" /></a>
+  <a href="https://tcc-modern-lvc-arch.github.io/latinoware2026/"><img src="/assets/link-paper.svg" width="49%" alt="Read the full paper, Latinoware 2026: tcc-modern-lvc-arch.github.io" /></a>
 </p>
 
-### 🌐 Beyond Tech
+<p align="center">
+  <a href="https://github.com/Raphonzius/poc-grpc"><img src="/assets/project-1.svg" width="49%" alt="poc-grpc: gRPC client and server on one shared Protobuf contract. Java." /></a>
+  <a href="https://github.com/Raphonzius/Demo-SpringSecurity6-JWT"><img src="/assets/project-2.svg" width="49%" alt="Demo-SpringSecurity6-JWT: stateless auth with Spring Security 6, OAuth2 resource server, RSA JWT. Java." /></a>
+  <a href="https://github.com/Raphonzius/spring-and-vue"><img src="/assets/project-3.svg" width="49%" alt="spring-and-vue: Spring Boot API with a Vue front end. Java and Vue." /></a>
+  <a href="https://github.com/Raphonzius/cachyos-setup"><img src="/assets/project-4.svg" width="49%" alt="cachyos-setup: reproducible CachyOS setup, KDE, dotfiles and package lists. Shell." /></a>
+</p>
 
-- I'm actively honing my DevOps skills through courses and guidance from my Tech Lead and Lead Developer.
-- Occasionally, my manager coaches me on commercial proposals and WBS for development projects.
+<p align="center">
+  <a href="https://github.com/Raphonzius?tab=repositories"><img src="/assets/desk.svg" width="100%" alt="Daily Tools. Programming: Java, Spring, Bash, JavaScript, Python. OS: Linux, Ubuntu, Red Hat, Windows. Utilities: AWS, Git, Podman, Jenkins, Postman. Opens all repositories." /></a>
+</p>
 
-### 🌱 Community Involvement
+<p align="center">
+  <a href="https://www.linkedin.com/in/rafaelrodriguespereira"><img src="/assets/record.svg" width="100%" alt="Shipped, in numbers: 2 days for a Java 21 and Spring Boot 4.1 migration other squads did in 2 sprints; USD 37k a year saved on AWS at Samsung SDS; 670k+ messages a month in 4 countries; 45% of subtasks sent to the cheapest mode by the task routing plugin at Getnet's Devin Enterprise. Opens LinkedIn." /></a>
+</p>
 
-- Outside of work and studies, I channel my energy into community service as a dedicated volunteer in the Scout movement ⚜️
-- From park revitalization to blood donations, I believe in the power of collective action to create positive change
-
-<h2 align="left">🌐 Find Me</h2>
-
-<div align="center">
-  <a href="mailto:rafael.informa@gmail.com" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=flat" height="35" alt="gmail logo" />
-  </a>
-  &nbsp;&ensp;&nbsp;
-  <a href="https://www.linkedin.com/in/rafaelrodriguespereira" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=flat" height="35" alt="linkedin logo" />
-  </a>
-</div>
+<p align="center">
+  <a href="mailto:rafael.informa@gmail.com"><img src="/assets/link-mail.svg" width="49%" alt="Email Rafael: rafael.informa@gmail.com" /></a>
+  <a href="https://www.linkedin.com/in/rafaelrodriguespereira"><img src="/assets/link-linkedin.svg" width="49%" alt="LinkedIn profile: in/rafaelrodriguespereira" /></a>
+</p>
