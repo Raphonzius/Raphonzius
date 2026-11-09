@@ -1,4 +1,7 @@
-"""oldschool: a Pix receipt and the paper artifacts of an old bank office.
+"""Builds the profile cards in assets/: a Pix receipt and the paper artifacts of an old bank office.
+
+Run from the repo root: `python gen/build.py` (needs `GITHUB_TOKEN` the first time, for the avatar;
+it is cached in gen/.cache/ afterwards).
 
 Typefaces: IBM Plex Mono (receipt lines) + Instrument Serif (display). Accent: rubber-stamp red.
 
@@ -24,7 +27,7 @@ import sys
 import textwrap
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lib  # noqa: E402
 from lib import esc  # noqa: E402
 
@@ -436,5 +439,5 @@ def build(out_dir: Path) -> None:
 
 
 if __name__ == "__main__":
-    build(lib.ROOT / "assets" / "oldschool")
+    build(lib.ROOT / "assets")
     print("ok")
